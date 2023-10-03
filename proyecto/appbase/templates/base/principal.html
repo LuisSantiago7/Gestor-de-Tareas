@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de pendientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #E9D5DA;
+            font-family: 'Abel', sans-serif;
+            padding-top: 60px;
+
+        }
+
+        .container{
+            max-width: 550px;
+            margin: auto;
+            background-color: #827397;
+            -webkit-box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.21);
+            box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.21);
+        }
+
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            color: #E9D5DA;
+        }
+        h3{
+            margin: 0;
+        }
+        .barra-superior{
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            padding: 10px;
+            
+            background: linear-gradient(90deg, #827397 0%, #E9D5DA 70%);
+        }
+        .barra-superior a{
+            color: #827397;
+            text-decoration: none;
+        }
+        .barra-superior a:hover{
+            color: black;
+            transition: color 0.5s ease;
+        }
+        .barra-superior #Volver{
+            color: #E9D5DA;
+            text-decoration: none;
+        }
+        .barra-superior #Volver:hover{
+            color: black;
+            transition: 0.5s ease;
+        }
+        #pendientes{
+            font-size: 10px;
+        }
+        .envoltorio-tarea{
+            display: flex;    
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ffffff;
+            border-top: 1px solid rgb(225,225,225);
+        }
+        .envoltorio-tarea .titulo-tarea {
+            align-items: center;
+        }
+        .titulo-tarea{
+            display: flex;
+        }
+        .titulo-tarea a{
+            text-decoration: none;
+            color: #E2C8C6;
+            transition: color 0.5s ease;
+        }
+        .titulo-tarea a:hover{
+            display: flex;
+            color: #797270;
+            transition: color 0.5s ease;
+        }
+        .icono-tarea-incompleta{
+            display: flex;
+            height: 4px;
+            width: 4px;
+            background-color: #827397;
+            border-radius: 50px;
+            margin-right: 5px;
+        }
+        .icono-tarea-completa{
+            display: flex;
+            height: 4px;
+            width: 4px;
+            background-color: #c0c0c0;
+            border-radius: 50px;
+            margin-right: 5px;
+        }
+        .enlace-eliminar{
+            text-decoration: none;
+            color: #E2C8C6;
+        }
+        .enlace-eliminar:hover{
+            display: flex;
+            color: #797270;
+            transition: color 0.5s ease; 
+        }
+        #agregar-busqueda{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            
+            background: linear-gradient(90deg, #827397 0%, #E9D5DA 70%);
+        }
+        #enlace-agregar{
+            display: flex;
+            color: #827397;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px #00000036
+        }
+        #enlace-agregar:hover{
+            color: black;
+            transition: 1s ease;
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea{
+            border: 1px solid #827397;
+            border-radius: 15px;
+            padding: 10px;
+            width: 90%;
+            margin-right: 5px;
+        }
+        label{
+            padding-top: 10px !important;
+            display: block;
+        }
+        .boton{
+            color: black ;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            padding: 10px;
+            justify-content: center;
+            font-size: 14px;
+            font-family:  'Abel', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            background: none;
+        }
+        .boton:hover{
+            color: black;
+            border: 1px solid #827397;
+            background-color: none;
+            transition: 0.5s ease;
+        }
+        .cuerpo-formulario-agregar{
+            color: #E2C8C6;
+            background-color: #FAFAFA;
+            padding: 20px;
+            
+        }
+        .confirmacion-eliminacion{
+            padding: 20px;
+            color: #E2C8C6;
+            background-color: #FAFAFA;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
+

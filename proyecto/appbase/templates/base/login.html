@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'C:\\Users\\luisa\\OneDrive\\Documentos\\misEntornos\\mi_Web\\src\\proyecto\\appbase\\templates\\base\\principal.html' %}
+    {% block content %}
+
+    <div class="barra-superior">
+        <h1>Ingresar</h1>
+    </div>
+
+    <div class="cuerpo-formulario-agregar">
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="boton" type="submit" value="Ingresar">
+        </form>
+        <p>¿No tienes cuenta?<a href="{% url 'register-user' %}"> Registrate</a></p>
+    </div>
+    
+    
+    {% endblock content %}
+</body>
+</html>

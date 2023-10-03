@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'C:\\Users\\luisa\\OneDrive\\Documentos\\misEntornos\\mi_Web\\src\\proyecto\\appbase\\templates\\base\\principal.html' %}
+    {% block content %}
+
+
+    <div class="barra-superior">
+        <h1>Registrarse</h1>
+    </div>
+    
+    <div class="cuerpo-formulario-agregar">
+        <form method="post">
+            {% csrf_token %}
+            <label>{{form.username.label}}</label>
+                {{form.username}}
+                
+            <label>{{form.password1.label}}</label>
+                {{form.password1}}
+
+            <label>{{form.password2.label}}</label>
+                {{form.password2}}
+
+            <input style="margin-top: 10px;" class="boton" type="submit" value="Registrar">
+        </form>
+        <p>¿Ya tienes cuenta? <a href="{% url 'login-user' %}">Ingresa</a></p>
+    </div>
+    {% endblock content %}
+</body>
+</html>

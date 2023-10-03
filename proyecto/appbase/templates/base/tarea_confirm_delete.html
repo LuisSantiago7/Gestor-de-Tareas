@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    {% extends 'C:\\Users\\luisa\\OneDrive\\Documentos\\misEntornos\\mi_Web\\src\\proyecto\\appbase\\templates\\base\\principal.html' %}
+    {% block content %}
+    <div class="barra-superior">
+        <a id="Volver" href="{% url 'tareas' %}">&#x1F868; Volver</a> 
+     </div>
+    
+    <div class="confirmacion-eliminacion">
+        <form method="POST">
+            {% csrf_token %}
+            <p>¿Estas seguro que quieres eliminar la tarea: "{{Tareas}}"</p>
+            <input class="boton" type="submit" value="Eliminar">
+        </form>
+    </div>
+    {% endblock content %}
+    </body>
+</html>

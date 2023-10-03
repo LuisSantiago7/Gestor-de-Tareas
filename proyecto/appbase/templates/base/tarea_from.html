@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'C:\\Users\\luisa\\OneDrive\\Documentos\\misEntornos\\mi_Web\\src\\proyecto\\appbase\\templates\\base\\principal.html' %}
+    {% block content %}
+    <div class="barra-superior">
+       <a id="Volver" href="{% url 'tareas' %}">&#x1F868; Volver</a> 
+    </div>
+
+    <div class="cuerpo-formulario-agregar">
+    <h1>Formulario de Tareas</h1>
+    <form method="POST" action="">
+        {% csrf_token %} <!--Permiten prevenir agujeros de seguridad Cross-site request forgery (falsificacion de solicitud entre sitios), es decir que previene un ataque de seguridad-->
+        {{form.as_p}}
+        <input class="boton" type="submit" value="Enviar">
+    </form>
+    </div>
+    {% endblock content %}
+</body>
+</html>
